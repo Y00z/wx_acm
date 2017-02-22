@@ -1,0 +1,21 @@
+
+<!--pages/alarmtype/alarmtype.wxml-->
+<view style="background-color: white">
+  <view bindtap="warninfo" class="alarmclass-root">
+    <image style="width: 100rpx; height: 100rpx;" src="/image/count.png"></image>
+    <view class="alarmclass-text">
+      <text class="text-big">预警列表</text>
+      <text class="text-min">数据预警详情</text>
+    </view>
+    <image style="width: 20rpx; height: 20rpx;   position:  absolute;right: 20rpx" src="/image/next_page.png"></image>
+  </view>
+  <view style="width:100%;height:2rpx;background-color:rgba(239, 239, 244, .8);margin:20rpx"></view>
+  <view bindtap="alarminfo" class="alarmclass-root">
+    <image style="width: 100rpx; height: 100rpx;" src="/image/count.png"></image>
+    <view class="alarmclass-text">
+      <text class="text-big">报警列表</text>
+      <text class="text-min">数据报警详情</text>
+    </view>
+    <image style="width: 20rpx; height: 20rpx;   position:  absolute;right: 20rpx" src="/image/next_page.png"></image>
+  </view>
+</view>

@@ -1,0 +1,12 @@
+<!--pages/alarm/alarm.wxml-->
+<view style="background-color: white" class="content">
+  <!--<import src="../template/template" />
+  <block wx:for="{{unitData}}">
+    <template is="data-item" data="{{item}}" />
+  </block>-->
+      <view class="tab-item" data-gid="f0fcea58586b54c001586b5ba77e0001" bindtap="clickItem">
+    <text class="item">试验机组</text>
+
+    <view style="width:100%;height:2rpx;background-color:rgba(239, 239, 244, .8);margin:20rpx"></view>
+  </view>
+</view>

@@ -1,0 +1,21 @@
+/* pages/alarmtype/alarmtype.wxss */
+
+.alarmclass-root {
+  display: flex;
+  flex-direction :row;
+  align-items:center;
+}
+.alarmclass-text{
+    display: flex;
+  flex-direction :column;
+  margin-left: 20rpx;
+}
+.text-big{
+    font-size: 37rpx;
+    color: black;
+}
+.text-min{
+    margin-top: 20rpx;
+    font-size: 28rpx;
+    color: gray; 
+}

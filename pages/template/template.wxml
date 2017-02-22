@@ -1,0 +1,9 @@
+
+<!--pages/template/template.wxml-->
+<template name="data-item">
+  <view class="tab-item" data-gid="{{item.id}}" bindtap="clickItem" id="{{item.id}}">
+    <text class="item">{{item.grp_name}}</text>
+
+    <view style="width:100%;height:2rpx;background-color:rgba(239, 239, 244, .8);margin:20rpx"></view>
+  </view>
+</template>

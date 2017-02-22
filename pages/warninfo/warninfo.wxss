@@ -1,0 +1,36 @@
+/* pages/warninfo/warninfo.wxss */
+
+.runaccount-root {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.runaccount-time {
+  display: flex;
+  flex-direction: column;
+  margin-left: 30rpx;
+}
+
+.runaccount-text {
+  font-size: 35rpx;
+  color: black;
+}
+
+.runaccount-number {
+  font-size: 45rpx;
+  margin-left: 30rpx;
+}
+
+.dialogInput-button {
+  display: flex;
+  flex-direction: row;
+}
+
+.showDeal {
+  display: block;
+}
+
+.hideDeal {
+  display: none;
+}

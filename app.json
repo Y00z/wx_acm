@@ -1,0 +1,49 @@
+{
+  "pages": [
+    "pages/login/login",
+    "pages/detail/detail",
+    "pages/logs/logs",
+    "pages/template/template",
+    "pages/table/table",
+    "pages/alarm/alarm",
+    "pages/account/account",
+    "pages/alarm/alarmclass",
+    "pages/runaccount/runaccount",
+    "pages/runaccountinfo/runaccountinfo",
+    "pages/alarmtype/alarmtype",
+    "pages/alarminfo/alarminfo",
+    "pages/warninfo/warninfo",
+    "pages/index/index"    
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "冷水机组监测平台",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#ccc",
+    "selectedColor": "#35495e",
+    "borderStyle": "white",
+    "backgroundColor": "#f9f9f9",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "image/monitoring.png",
+        "selectedIconPath": "image/monitoring_selected.png",
+        "text": "实时监测"
+      },
+      {
+        "pagePath": "pages/alarm/alarm",
+        "iconPath": "image/alarm.png",
+        "selectedIconPath": "image/alarm_selected.png",
+        "text": "报警管理"
+      },
+      {
+        "pagePath": "pages/account/account",
+        "iconPath": "image/equipment.png",
+        "selectedIconPath": "image/equipment_selected.png",
+        "text": "设备台帐"
+      }
+    ]
+  }
+}

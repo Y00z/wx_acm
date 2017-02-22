@@ -1,0 +1,18 @@
+/* pages/runaccount/runaccount.wxss */
+.runaccount-root{
+    display: flex;
+    flex-direction:row;
+}
+.runaccount-time{
+    display: flex;
+    flex-direction:column;
+    margin-left: 30rpx;
+}
+.runaccount-text{
+    font-size: 35rpx;
+    color: black;
+}
+.runaccount-number{
+    font-size: 45rpx;
+    margin-left: 30rpx;
+}

@@ -1,0 +1,98 @@
+
+<!--pages/template/template.wxml-->
+<template name="data-table">
+  <scroll-view scroll-x="true" style="height: 100rpx;">
+    <view class="scroll-x-top">
+      <button class="buttonTopStyle" type="primary" size="{{primarySize}}" loading="{{loading1}}" bindtap="primary1"> 冷冻水进出水温度 </button>
+      <button class="buttonTopStyle" type="primary" size="{{primarySize}}" loading="{{loading2}}" bindtap="primary2"> 冷却水进出水温度 </button>
+      <button class="buttonTopStyle" type="primary" size="{{primarySize}}" loading="{{loading3}}" bindtap="primary3"> #1压缩机高低压 </button>
+      <button class="buttonTopStyle" type="primary" size="{{primarySize}}" loading="{{loading4}}" bindtap="primary4"> #2压缩机高低压 </button>
+    </view>
+  </scroll-view>
+  <view class="table-root">
+
+    <!--横-->
+    <view class="table-text-top">
+
+      <!--竖-->
+      <view class="table-vertical">
+        <text class="table-text">压缩机号</text>
+        <text class="table-text">#1</text>
+        <text class="table-text">#2</text>
+      </view>
+
+      <!--竖-->
+      <view class="table-vertical">
+        <text class="table-text">负荷</text>
+        <text class="table-text">{{data[0].t_fuhe}}%</text>
+        <text class="table-text">{{data[1].t_fuhe}}%</text>
+      </view>
+
+      <!--竖-->
+      <view class="table-vertical">
+        <text class="table-text">排气温度</text>
+        <text class="table-text">{{data[0].t1_pqwd}}</text>
+        <text class="table-text">{{data[1].t1_pqwd}}</text>
+      </view>
+
+      <!--竖-->
+      <view class="table-vertical">
+        <text class="table-text">压力</text>
+        <view class="table-vertical-item">
+          <text style="color:blue" class="table-text-item">{{data[1].t1_lowPre}}</text> 
+          <text style="color:red" class="table-text-item">{{data[1].t1_highPre}}</text>
+        </view>
+        <view class="table-vertical-item">
+          <text style="color:blue" class="table-text-item">{{data[0].t1_lowPre}}</text>
+          <text style="color:red" class="table-text-item">{{data[0].t1_highPre}}</text>
+        </view>
+      </view>
+
+      <!--竖-->
+      <view class="table-vertical">
+        <text class="table-text">电流</text>
+        <text class="table-text">{{data[0].t1_current}}</text>
+        <text class="table-text">{{data[1].t1_current}}</text>
+      </view>
+
+      <!--竖-->
+      <view class="table-vertical">
+        <text class="table-text">状态</text>
+        <text wx:if="{{data[0].t1_openStatu == 0}}" class="table-text">停机</text>
+        <view class="table-text" wx:else> 开机 </view>
+        <text wx:if="{{data[1].t1_openStatu == 0}}" class="table-text">停机</text>
+        <view class="table-text" wx:else>开机 </view>
+      </view>
+    </view>
+
+    <!--横-->
+    <view class="table-text-top">
+      <view class="table-vertical-item-buttom">
+        <view>
+          <text>冷冻水泵:</text>
+          <text wx:if="{{coolwater == 0}}">停机</text>
+          <text wx:else> 开机 </text>
+        </view>
+        <view>
+          <text>冷却水泵:</text>
+          <text wx:if="{{coldwater == 0}}">停机</text>
+          <text wx:else> 开机 </text>
+        </view>
+      </view>
+      <view class="table-vertical-item-buttom">
+        <text>出水:{{ldscswd}}</text>
+        <text>出水:{{lqscswd}}</text>
+      </view>
+      <view class="table-vertical-item-buttom">
+        <text>回水:{{ldshswd}}</text>
+        <text>回水:{{lqshswd}}</text>
+      </view>
+    </view>
+  </view>
+  <view class="table-title">
+    <text class="chart-title">{{title}}</text>
+    <view class="table-title-draw">
+      <canvas canvas-id="wxChartCanvas" class="canvas"></canvas>
+    </view>
+  </view>
+</template>

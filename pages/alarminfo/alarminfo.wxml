@@ -1,0 +1,23 @@
+
+<!--pages/warninfo/warninfo.wxml-->
+<view style="background-color: white">
+  <scroll-view scroll-y="true" style="height: 100%;">
+    <block wx:for="{{data}}">
+      <view bindtap="clickItem" data-mdata="{{item}}" class="runaccount-root">
+        <view class="runaccount-time">
+          <text class="runaccount-text">{{item.wst_desc}}</text>
+          <text class="runaccount-text">{{item.aws_time}}</text>
+        </view>
+        <image style="width: 20rpx; height: 20rpx; position:  absolute;right: 20rpx;margin-top:25rpx" src="/image/next_page.png"></image>
+      </view>
+      <view style="width:100%;height:2rpx;background-color:rgba(239, 239, 244, .8);margin:20rpx"></view>
+    </block>
+  </scroll-view>
+</view>
+<view class="{{isAdd?'showDeal':'hideDeal'}}">
+  <input bindinput="bindKeyInput" placeholder="输入描述信息" focus="{{focus}}" />
+  <view class="dialogInput-button">
+    <button style="width:30%;" bindtap="cancelDeal">取消</button>
+    <button style="width:30%;" bindtap="confirmDeal">确定</button>
+  </view>
+</view>

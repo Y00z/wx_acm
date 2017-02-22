@@ -1,0 +1,19 @@
+
+<!--pages/login/login.wxml-->
+<view class="loginStyle">
+  <image style="width: 500rpx; height:260rpx" src="/image/logo.png" mode="aspectFit"></image>
+  <view class="inputuser">
+    <text>帐号：</text>
+      <input bindinput="bindUserInput" class="inputStyle" placeholder="请输入帐号" />
+  </view>
+  <view class="inputuser">
+    <text>密码：</text>
+      <input bindinput="bindPassInput" type="password" class="inputStyle" placeholder="请输入密码" />
+  </view>
+  <view class="loginButton">
+    <button bindtap="login" type="primary" style="margin-right:88rpx">登陆</button>
+    <button bindtap="clean" type="warn">清空</button>
+  </view>
+    <text>v1.0.0</text>
+    <text>****信息技术有限公司</text>
+</view>
